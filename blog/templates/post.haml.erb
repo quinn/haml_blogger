@@ -1,0 +1,7 @@
+#blog_post
+  %h1 <%= post[:title] %>
+  .meta
+    .date <%= post[:created_at].strftime('%A, %B %e, %G') %>
+    .poster <%= post[:poster] %>
+  .post
+    <%= post[:content] %>

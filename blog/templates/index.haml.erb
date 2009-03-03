@@ -1,0 +1,11 @@
+#blog_posts<% 
+  posts.each do |post| %>
+  .post
+    %h1 
+      =link '<%= post[:title] %>', '/blog/posts/<%= post[:key] %>'
+    .meta
+      .date <%= post[:created_at].strftime('%A, %B %e, %G') %>
+      .poster <%= post[:poster] %>
+    .post
+      <%= post[:summary] %>
+<% end %>
